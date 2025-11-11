@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNumero1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Número 1" />
+
+    <EditText
+        android:id="@+id/editTextNumero2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Número 2"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultado: "
+        android:textSize="18sp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

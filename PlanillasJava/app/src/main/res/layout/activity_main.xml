@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="CODE: 349" />
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLANILLAS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:textColor="?android:attr/textColorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar Empleado"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etCarnet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ingrese carnet"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <!-- TableLayout para datos personales -->
+    <TableLayout
+        android:id="@+id/tableDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"/>
+
+    <!-- ScrollView para planillas/meses -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:id="@+id/containerResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="8dp"/>
+    </ScrollView>
+
+</LinearLayout>

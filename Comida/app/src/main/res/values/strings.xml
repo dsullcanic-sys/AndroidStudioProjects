@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Comida</string>
+    <string name="bebidas_title">🥤 BEBIDAS</string>
+    <string name="anterior_button_text">⬅ Anterior</string>
+    <string name="siguiente_button_text">Siguiente ➡</string>
+    <string name="volver_menu_button_text">← Volver al Menú</string>
+    <string name="bebidas_image_description">Imagen de bebidas</string>
+    <string name="postres_title">🍰 POSTRES</string>
+    <string name="postres_image_description">Imagen de postres</string>
+    <string name="platos_title">🍔 PLATOS</string>
+    <string name="platos_image_description">Imagen de platos</string>
+</resources>

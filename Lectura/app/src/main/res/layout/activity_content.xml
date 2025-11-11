@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Espacio superior para separar del título -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODE: 349" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona un elemento de la lista para ver su contenido"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:background="#f9f9f9"
+            android:textColor="#333333" />
+
+    </ScrollView>
+
+</LinearLayout>

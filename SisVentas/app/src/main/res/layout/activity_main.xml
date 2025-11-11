@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <!-- Código del estudiante -->
+    <TextView
+        android:id="@+id/codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Código: 349"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Nombre y precio del plato -->
+    <TextView
+        android:id="@+id/Descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Charquekan  35 Bs"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Imagen del plato -->
+    <ImageView
+        android:id="@+id/Imagen"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/p01"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botones de control -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Anterior -->
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="&lt;"
+            android:textSize="20sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Devolver -->
+        <Button
+            android:id="@+id/btnDevolver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="✖"
+            android:textSize="20sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Factura -->
+        <Button
+            android:id="@+id/btnFactura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📄"
+            android:textSize="16sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Comprar -->
+        <Button
+            android:id="@+id/btnComprar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="✓"
+            android:textSize="20sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Siguiente -->
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="&gt;"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Cantidad comprada -->
+    <TextView
+        android:id="@+id/unidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprados: 0"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Total -->
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: 0 Bs"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Botón de Historial al final -->
+    <Button
+        android:id="@+id/btnHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VER HISTORIAL"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

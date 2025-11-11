@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODE: 349"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        android:textColor="?android:textColorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etCodProf"
+            android:hint="Código Profesión"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etCodDepto"
+            android:hint="Código Departamento"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConsultar"
+        android:text="Buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="16dp" />
+</LinearLayout>

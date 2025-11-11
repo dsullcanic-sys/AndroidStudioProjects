@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <!-- Título único, centrado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvTituloDepartamentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departamentos"
+            android:textSize="22sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Campo de búsqueda -->
+    <EditText
+        android:id="@+id/edtBuscarDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código o descripción"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBuscarDepartamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buscar"/>
+
+        <Button
+            android:id="@+id/btnLimpiarDepartamento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Limpiar"/>
+    </LinearLayout>
+
+    <!-- Mensaje de resultado o error -->
+    <TextView
+        android:id="@+id/tvResultadoDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <!-- Scroll vertical + horizontal para la tabla -->
+    <ScrollView
+        android:id="@+id/scrollDepartamentosVertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollDepartamentosHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableDepartamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"/>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <!-- Pie Chart fijo debajo de la tabla -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChartDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+</LinearLayout>

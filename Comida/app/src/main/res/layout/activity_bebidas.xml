@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:fitsSystemWindows="true"
+    tools:context=".Bebidas">
+
+    <TextView
+        android:id="@+id/tituloBebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BEBIDAS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imagenBebidas"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/cafe"
+        android:contentDescription="Imagen de bebidas"/>
+
+    <TextView
+        android:id="@+id/descripcionBebidas"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnAnteriorBebidas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Anterior"/>
+
+        <Button
+            android:id="@+id/btnSiguienteBebidas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Siguiente"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVolverBebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver al Menú"/>
+
+</LinearLayout>

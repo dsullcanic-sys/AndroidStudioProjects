@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E50137"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Nombre del usuario pequeño -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="David Sullcani Chuquimia"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:paddingBottom="4dp"
+        android:textStyle="bold"/>
+
+    <!-- Nombre del Pokémon grande -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bulbasaur"
+        android:background="#88000000"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"/>
+
+    <!-- Imagen del Pokémon -->
+    <!-- fondo negro detrás de la imagen -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:background="#88000000"
+        android:padding="8dp"
+        android:src="@drawable/bulbasaur"/>
+
+    <!-- Botones de navegación -->
+    <!-- barra semi-transparente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#88000000"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="izquierda"
+            android:text="&lt;"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="mostrar"
+            android:text="SHOW"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="derecha"
+            android:text="&gt;"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000"/>
+
+    </LinearLayout>
+
+</LinearLayout>

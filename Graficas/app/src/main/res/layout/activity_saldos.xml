@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:id="@+id/tvTituloSaldos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldos"
+            android:textSize="22sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtCiBuscarSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Carnet o cuenta"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBuscarSaldo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buscar"/>
+
+        <Button
+            android:id="@+id/btnLimpiarSaldo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Limpiar"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResultadoSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:id="@+id/scrollResumen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:fillViewport="true">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+            <TableLayout
+                android:id="@+id/tableSaldos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"/>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/layoutSaldosDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartSaldos"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+</LinearLayout>

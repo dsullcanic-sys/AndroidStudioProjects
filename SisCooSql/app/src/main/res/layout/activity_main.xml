@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODE: 349"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_marginBottom="14dp"/>
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cooperativas Menu"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:textColor="?android:textColorPrimary"
+        android:layout_marginBottom="6dp"/>
+
+    <TextView
+        android:id="@+id/tvEstadoCarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#009900"
+        android:padding="8dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnClientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clientes"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7C3AED"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnProfesiones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profesiones"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2563EB"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnDepartamentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Departamentos"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#EA580C"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnSaldos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saldos"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#16A34A"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

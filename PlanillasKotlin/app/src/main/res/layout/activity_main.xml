@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/codigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CODE: 349" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para cargar archivos -->
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargar archivos CSV" />
+
+    <!-- Campo para carnet -->
+    <EditText
+        android:id="@+id/etCarnet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese carnet"
+        android:inputType="number"
+        android:layout_marginTop="12dp" />
+
+    <!-- Botón de búsqueda -->
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:layout_marginTop="8dp" />
+
+    <!-- Resultados scrollables -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:id="@+id/containerResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

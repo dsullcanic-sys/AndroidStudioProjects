@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnCargar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KARDEX"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Carnet (Docente):"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/inputCarnet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Carnet"
+                android:inputType="textCapCharacters"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Buscar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp"
+            android:text="Esperando carga de archivos..."
+            android:textStyle="italic"/>
+
+        <!-- Nombre del docente -->
+        <TextView
+            android:id="@+id/txtNombreDocente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!-- Switch para alternar entre períodos y años -->
+        <LinearLayout
+            android:id="@+id/layoutSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por Períodos"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por Años"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Gráfico -->
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/barChart"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

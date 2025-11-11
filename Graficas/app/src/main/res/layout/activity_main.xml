@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Sección superior: Código centrado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="22dp">
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="#222222"
+            android:text="CODIGO: 349"/>
+    </LinearLayout>
+
+    <!-- Sección central/botones, centrada verticalmente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnCargarArchivos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Clientes y Movimientos"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:layout_marginBottom="70dp"/>
+
+        <Button
+            android:id="@+id/btnAbrirClientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clientes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B983FF"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnProfesiones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profesiones"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3EC6FF"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnDepartamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Departamentos"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#42E16A"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnAbrirSaldos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saldos"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF7B54"
+            android:layout_marginBottom="12dp"/>
+    </LinearLayout>
+</LinearLayout>

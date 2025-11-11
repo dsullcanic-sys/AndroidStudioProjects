@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTituloProfesiones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profesiones"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Campo de búsqueda -->
+    <EditText
+        android:id="@+id/edtBuscarProfesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código o descripción"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnBuscarProfesion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buscar"/>
+
+        <Button
+            android:id="@+id/btnLimpiarProfesion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Limpiar"/>
+    </LinearLayout>
+
+    <!-- Mensaje de resultado o error -->
+    <TextView
+        android:id="@+id/tvResultadoProfesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Scroll vertical + horizontal para la tabla -->
+    <ScrollView
+        android:id="@+id/scrollProfesionesVertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollProfesionesHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tableProfesiones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"/>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <!-- Gráfico siempre debajo de la tabla -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChartProfesiones"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+</LinearLayout>

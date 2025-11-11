@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSigla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INF 282"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especificaciones Formales"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvDocente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan Contreras - Paralelo A"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lun, Mié 10:00-12:00 (P4-A2)"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

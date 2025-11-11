@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Barra de búsqueda y botones -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/etBuscar"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Buscar por nombre, carnet o cuenta" />
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar" />
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpiar"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <!-- Info de paginación -->
+        <TextView
+            android:id="@+id/tvInfoPaginacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Página 1 de 1" />
+
+        <!-- Botones de paginación -->
+        <LinearLayout
+            android:id="@+id/layoutPaginacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anterior" />
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"/>
+        </LinearLayout>
+
+        <!-- Datos del cliente y resumen general de movimientos -->
+        <LinearLayout
+            android:id="@+id/layoutDatosCliente"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <!-- Cuentas del cliente -->
+        <LinearLayout
+            android:id="@+id/layoutCuentas"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Gráfico de barras -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartMovimientos"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="18dp"/>
+
+    </LinearLayout>
+</ScrollView>

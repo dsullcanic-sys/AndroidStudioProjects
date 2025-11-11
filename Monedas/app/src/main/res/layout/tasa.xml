@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <!-- Monto a convertir -->
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto a convertir"
+        android:inputType="numberDecimal" />
+
+    <!-- Tasa personalizada -->
+    <EditText
+        android:id="@+id/customRateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tasa personalizada"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="12dp" />
+
+    <!-- Botón de convertir -->
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:layout_marginTop="12dp" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/resultValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
+
+    <!-- Botón de cancelar -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
