@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         searchNombre = findViewById(R.id.searchNombre);
         btnBuscar = findViewById(R.id.btnBuscar);
 
-        new cargaURL().execute("https://raw.githubusercontent.com/dsullcanic-sys/INF-325-Programacion-Virtual/refs/heads/main/15.%20PlatosDBOnline/Platos.json");
+        new cargaURL().execute("https://raw.githubusercontent.com/dsullcanic-sys/INF-325-Programacion-Virtual/refs/heads/main/15.PlatosDBOnline/Platos.json");
 
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
