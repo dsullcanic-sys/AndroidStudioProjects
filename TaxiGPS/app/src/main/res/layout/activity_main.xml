@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -44,6 +43,12 @@
             android:textColor="#fff"
             android:layout_marginBottom="12dp"/>
 
+        <!-- Mapa OSMDroid para taxis y ubicación -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
         <TextView
             android:id="@+id/tvLabelCercanos"
             android:layout_width="wrap_content"
@@ -65,7 +70,7 @@
             android:id="@+id/tvLabelResto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Otros taxis"
+            android:text="Taxis lejanos"
             android:textStyle="bold"
             android:textSize="14sp"
             android:paddingTop="15dp"
@@ -76,5 +81,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stretchColumns="*"/>
+
     </LinearLayout>
 </ScrollView>
