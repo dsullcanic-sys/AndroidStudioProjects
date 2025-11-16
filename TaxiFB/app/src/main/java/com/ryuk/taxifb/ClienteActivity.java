@@ -413,18 +413,7 @@ public class ClienteActivity extends AppCompatActivity {
             mapView.getOverlays().clear();
 
             // Listener para cerrar InfoWindow al tocar el mapa
-            mapView.setOnTouchListener((v, event) -> {
-                // Cerrar todos los InfoWindows abiertos
-                for (org.osmdroid.views.overlay.Overlay overlay : mapView.getOverlays()) {
-                    if (overlay instanceof Marker) {
-                        Marker marker = (Marker) overlay;
-                        if (marker.isInfoWindowShown()) {
-                            marker.closeInfoWindow();
-                        }
-                    }
-                }
-                return false; // Permitir que el evento continúe
-            });
+
 
             GeoPoint myGeo = new GeoPoint(myLat, myLon);
             Marker myMarker = new Marker(mapView);

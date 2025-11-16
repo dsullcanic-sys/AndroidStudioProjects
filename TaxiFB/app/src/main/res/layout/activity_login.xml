@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🔐 Login Administrador"
+        android:text="Login Administrador"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#1976D2"
@@ -38,6 +38,7 @@
 
     <Button
         android:id="@+id/btnLogin"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ingresar"

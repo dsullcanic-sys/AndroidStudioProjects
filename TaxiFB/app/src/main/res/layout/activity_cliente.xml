@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
 
-    <!-- PARTE SUPERIOR: DIRECCIÓN, BOTÓN Y MAPA (SIEMPRE VISIBLE) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp">
 
-        <!-- DIRECCIÓN Y BOTÓN ACTUALIZAR EN UNA SOLA LÍNEA -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,12 +29,17 @@
 
             <Button
                 android:id="@+id/btnActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🔄"/>
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:text="ACTUALIZAR"
+                android:textSize="14sp" />
+
         </LinearLayout>
 
-        <!-- MAPA REDUCIDO: 300dp -->
         <org.osmdroid.views.MapView
             android:id="@+id/mapContainer"
             android:layout_width="match_parent"
@@ -42,7 +48,6 @@
             android:layout_marginBottom="10dp"/>
     </LinearLayout>
 
-    <!-- PARTE INFERIOR: TABLAS CON SCROLL VERTICAL -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -55,7 +60,6 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <!-- TABLA TAXIS CERCANOS -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +79,6 @@
                     android:layout_height="wrap_content" />
             </HorizontalScrollView>
 
-            <!-- TABLA OTROS TAXIS -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

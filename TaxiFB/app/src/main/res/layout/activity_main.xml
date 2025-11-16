@@ -3,65 +3,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#F5F5F5">
+    android:fitsSystemWindows="true">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvCodigo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="🚕 Sistema de Taxis"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#1976D2"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/tvEstado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cargando datos..."
-        android:textSize="16sp"
-        android:textColor="#666"
         android:gravity="center"
-        android:layout_marginBottom="32dp"
-        android:minHeight="60dp"/>
+        android:paddingBottom="10dp"
+        android:text="CODE: 349"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnCliente"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="👤 Soy Cliente"
-        android:textSize="18sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
-        android:enabled="false"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical">
 
-    <Button
-        android:id="@+id/btnAdmin"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="⚙️ Soy Administrador"
-        android:textSize="18sp"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"
-        android:enabled="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sistema de Taxis"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/btnActualizarConductores"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="🔄 Actualizar Conductores"
-        android:textSize="14sp"
-        android:padding="12dp"
-        android:backgroundTint="#FF9800"/>
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargando datos..."
+            android:textSize="16sp"
+            android:textColor="#666"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"
+            android:minHeight="60dp"/>
+
+        <Button
+            android:id="@+id/btnCliente"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Soy Cliente"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btnAdmin"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Soy Administrador"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:enabled="false"/>
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="Versión 1.0"
-        android:textSize="12sp"
         android:textColor="#999"
-        android:layout_marginTop="32dp"/>
-
+        android:textSize="12sp" />
 </LinearLayout>

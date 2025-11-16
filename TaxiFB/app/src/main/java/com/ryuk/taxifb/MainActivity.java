@@ -25,7 +25,7 @@ import java.util.*;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final int REQUEST_LOCATION = 1;
-    private Button btnCliente, btnAdmin, btnActualizarConductores;
+    private Button btnCliente, btnAdmin;
     private TextView tvEstado;
     private FirebaseFirestore db;
     private FusedLocationProviderClient fusedLocationClient;
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         // UI
         btnCliente = findViewById(R.id.btnCliente);
         btnAdmin = findViewById(R.id.btnAdmin);
-        btnActualizarConductores = findViewById(R.id.btnActualizarConductores);
         tvEstado = findViewById(R.id.tvEstado);
 
         // Deshabilitar botones hasta que carguen los datos
@@ -68,10 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdmin.setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
-        });
-
-        btnActualizarConductores.setOnClickListener(v -> {
-            actualizarConductoresDesdeWeb();
         });
 
         // INICIAR CARGA DE DATOS
@@ -354,86 +349,6 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     tvEstado.setText("Error con conductores. Creando usuarios...");
                     crearUsuariosEjemplo();
-                });
-            }
-        }).start();
-    }
-
-    // ========== ACTUALIZAR CONDUCTORES DESDE WEB (BOTÓN) ==========
-    private void actualizarConductoresDesdeWeb() {
-        tvEstado.setText("Descargando conductores desde web...");
-
-        new Thread(() -> {
-            try {
-                Log.d(TAG, "Descargando conductores (botón)...");
-                URL url = new URL("https://clasespersonales.com/taxis/listacon.php");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-                StringBuilder json = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) json.append(line);
-                reader.close();
-
-                String jsonStr = json.toString();
-                Log.d(TAG, "JSON recibido: " + jsonStr.substring(0, Math.min(100, jsonStr.length())) + "...");
-
-                // Parsear JSON manualmente
-                if (jsonStr.contains("\"conductores\":[")) {
-                    String conductoresArray = jsonStr.substring(
-                            jsonStr.indexOf("\"conductores\":[") + 15,
-                            jsonStr.lastIndexOf("]")
-                    );
-
-                    String[] conductores = conductoresArray.split("\\},\\{");
-                    int count = 0;
-
-                    runOnUiThread(() -> tvEstado.setText("Guardando " + conductores.length + " conductores..."));
-
-                    for (String conductor : conductores) {
-                        try {
-                            String carnet = extraerValor(conductor, "carnet");
-                            String paterno = extraerValor(conductor, "paterno");
-                            String materno = extraerValor(conductor, "materno");
-                            String nombres = extraerValor(conductor, "nombres");
-
-                            if (!carnet.isEmpty()) {
-                                Map<String, Object> conductorData = new HashMap<>();
-                                conductorData.put("carnet", carnet);
-                                conductorData.put("nombre", nombres);
-                                conductorData.put("apellido", paterno + " " + materno);
-
-                                // USAR CARNET COMO ID
-                                db.collection("conductores")
-                                        .document(carnet)
-                                        .set(conductorData)
-                                        .addOnSuccessListener(aVoid -> {
-                                            Log.d(TAG, "✓ Conductor guardado: " + carnet);
-                                        })
-                                        .addOnFailureListener(e -> {
-                                            Log.e(TAG, "✗ Error guardando conductor: " + e.getMessage());
-                                        });
-
-                                count++;
-                            }
-                        } catch (Exception e) {
-                            Log.e(TAG, "Error procesando conductor: " + e.getMessage());
-                        }
-                    }
-
-                    final int totalConductores = count;
-                    Log.d(TAG, "Total conductores procesados: " + totalConductores);
-
-                    runOnUiThread(() -> {
-                        tvEstado.setText("✓ " + totalConductores + " conductores actualizados");
-                    });
-                } else {
-                    throw new Exception("JSON inválido");
-                }
-
-            } catch (Exception e) {
-                Log.e(TAG, "Error descargando conductores: " + e.getMessage());
-                e.printStackTrace();
-                runOnUiThread(() -> {
-                    tvEstado.setText("Error descargando conductores: " + e.getMessage());
                 });
             }
         }).start();
