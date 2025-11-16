@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "557518032443",
+    "project_id": "taxigps-ryuk",
+    "storage_bucket": "taxigps-ryuk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557518032443:android:9d3e9f26273743958f561e",
+        "android_client_info": {
+          "package_name": "com.ryuk.taxifb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxK2iWWt4z5kxVENXzuJOSMmu13Xv_tlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557518032443:android:1d5bb60bda6360038f561e",
+        "android_client_info": {
+          "package_name": "com.ryuk.taxigps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxK2iWWt4z5kxVENXzuJOSMmu13Xv_tlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

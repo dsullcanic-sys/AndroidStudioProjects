@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🚕 Sistema de Taxis"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargando datos..."
+        android:textSize="16sp"
+        android:textColor="#666"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:minHeight="60dp"/>
+
+    <Button
+        android:id="@+id/btnCliente"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="👤 Soy Cliente"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/btnAdmin"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="⚙️ Soy Administrador"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/btnActualizarConductores"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="🔄 Actualizar Conductores"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:backgroundTint="#FF9800"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versión 1.0"
+        android:textSize="12sp"
+        android:textColor="#999"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>
