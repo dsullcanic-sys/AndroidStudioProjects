@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "286077655822",
+    "project_id": "sispreventa-ryuk",
+    "storage_bucket": "sispreventa-ryuk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286077655822:android:c95b613b8928687a5bd55f",
+        "android_client_info": {
+          "package_name": "com.ryuk.sispreventa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiEYwYwZqP1qygUUYZoQjVoPAcVTkrrnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286077655822:android:e7b57aae93e259285bd55f",
+        "android_client_info": {
+          "package_name": "com.ryuk.sispreventas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiEYwYwZqP1qygUUYZoQjVoPAcVTkrrnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
